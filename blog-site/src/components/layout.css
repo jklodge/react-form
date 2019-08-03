@@ -1,35 +1,122 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
+@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans|Titillium+Web&display=swap");
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-.cardBox {
+h1 {
+  font-size: 1.38316rem !important;
+}
+
+.about-container {
+  display: flex;
+  margin: 0 17%;
+}
+@media (max-width: 490px) {
+  .about-container {
+    flex-direction: column;
+    margin: 0 5%;
+  }
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: black;
+  margin: 0 3%;
+}
+
+.about {
+  margin-right: 5%;
+  text-align: left;
+  max-width: 325px;
+}
+
+.icons {
+  margin-right: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons a {
+  color: black;
+}
+
+.homeAbout {
+  margin: 0 17%;
+}
+
+@media (max-width: 490px) {
+  .homeAbout {
+    margin: 0 5%;
+  }
+}
+.cardContainer {
   display: flex;
   flex-wrap: wrap;
-  margin: 4% 7%;
+  margin: 0 17%;
+  justify-content: center;
 }
 
-.card {
-  flex: 1 0  40%; /* explanation below */
-  margin: 7px;
-  height: 200px;
-  background-color: lightcoral;
-  height: 50vh;
-  width: 40vw;
-  color: white;
-  padding: 7%;
+.border {
+  border-top: solid black 10px;
+  margin: -0.5% 0.5%;
+  width: 100%;
+}
+
+@media (max-width: 490px) {
+  .cardContainer {
+    flex-direction: column;
+    margin: 0 5%;
+  }
+}
+
+.cardBox {
   position: relative;
+  margin: 0.5% 0.5%;
+  flex: 1 0 31%;
+  width: 45%;
+  max-height: 330px;
+  height: 50%;
+  padding-bottom: 20%;
 }
 
+@media (max-width: 490px) {
+  .cardBox {
+    width: 100%;
+  }
+}
 .overlay {
   position: absolute;
-  margin: 7px;
-  height: 50vh;
-  width: 40vw;
-  background-color: lightblue;
+  line-height: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  z-index: 3;
+  max-width: 100%;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #202020;
+  opacity: 0;
+}
+
+.overlay p {
+  margin: 5%;
+  text-align: center;
+}
+
+.gatsby-image-wrapper {
+  position: static !important;
+}
+
+.overlay:hover {
+  opacity: 1;
 }
 
 body {
@@ -214,7 +301,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em Roboto, serif;
+  font: 112.5%/1.45em Titillium Web, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -229,7 +316,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: Roboto, serif;
+  font-family: Titillium Web, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -259,7 +346,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: Roboto, sans-serif;
+  font-family: Titillium Web, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -275,7 +362,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: Roboto, sans-serif;
+  font-family: Titillium Web, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -291,7 +378,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: Roboto, sans-serif;
+  font-family: Titillium Web, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -307,7 +394,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: Roboto, sans-serif;
+  font-family: Titillium Web, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -323,7 +410,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: Roboto, sans-serif;
+  font-family: Titillium Web, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -339,7 +426,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: Roboto, sans-serif;
+  font-family: Titillium Web, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -615,8 +702,8 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Titillium Web Mono",
+    "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -640,17 +727,17 @@ pre tt:after {
 }
 
 .cards {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .element-card {
-             width: 20em;
-             margin: 16px;
-           }
+  display: flex;
+  flex-wrap: wrap;
+}
+.element-card {
+  width: 20em;
+  margin: 16px;
+}
 
-           .element-card > .mdc-card__media {
-             height: 9em;
-           }
+.element-card > .mdc-card__media {
+  height: 9em;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

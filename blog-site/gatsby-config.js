@@ -41,16 +41,21 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Roboto`,
-            variants: [`300`, `500`]
+            family: `Titillium Web`,
+            variants: [`300`, `500`],
           },
           {
             family: `Open Sans`,
-            variants: [`400`, `700`]
+            variants: [`400`, `700`],
           },
+
+          //           font-family: 'Titillium Web', sans-serif;
+          // font-family: 'Arvo', serif;
+          // font-family: 'Cinzel', serif;
+          // font-family: 'Quattrocento Sans', sans-serif;
         ],
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

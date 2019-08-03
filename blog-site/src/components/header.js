@@ -10,33 +10,35 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-        textAlign: 'center',
-        display: 'flex',
-        justifyContent: 'space-around',
+        margin: `9vh auto`,
+        maxWidth: "100%",
+        padding: `0 6vw`,
+        textAlign: "center",
+        display: "flex",
       }}
     >
-    <Link
-    to="/page-2/"
-     style={{
-      color: 'lightblue',
-      textDecoration: `none`,
-      fontWeight: `bold`,
-      fontStyle: 'italic',
-      }}
-    >
-    About
-    </Link>
+      <Link
+        to="/about/"
+        style={{
+          color: `#202020`,
+          textDecoration: `none`,
+          fontWeight: `bold`,
+          fontSize: "15px",
+          flex: "1 1 0px",
+          textAlign: "left",
+        }}
+      >
+        ABOUT
+      </Link>
 
       <h3 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `lightcoral`,
+            color: `#202020`,
             textDecoration: `none`,
-            fontStyle: 'italic'
+            fontSize: "24px",
+            flex: "0 0 auto",
           }}
         >
           {siteTitle}
